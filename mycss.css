@@ -6,8 +6,16 @@ h1 {
   margin: 0 ;
   padding: 0 ;
 }
+#osto {
+  margin-top: 20px;
+  width:100px;
+}
 
-.btn {
+#tiedot {
+  margin-top: 20px;
+  width:100px;
+}
+#hae {
   width: 500px;
   text-align: center;
 }
@@ -28,13 +36,14 @@ h1 {
 }
 
  .form-group {
+  
    text-align: center;
    width: 500px;
  }
 #hakuotsikko {
   text-align: center;
 color: black;
- font-size: 15px;
+ font-size: 20px;
 }
 
 #keskitys {

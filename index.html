@@ -7,13 +7,20 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <link rel="stylesheet" href="mycss.css">
-  
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script src="js.js"></script>
 </head>
 
@@ -22,11 +29,13 @@
 
   <div class="light-blue lighten-2">
     <h1 class="cyan" id="otsikko">Finnkino haku</h1>
-    <div id="keskitys" class="col-3 center-block">
-        <div class="col-3 center-block">
-    <div class="form-group">
+
+    <div class="col-4 center-block">
+      <div class="form-group">
         <label id="hakuotsikko" for="exampleFormControlSelect1">HAE TEATTERI</label>
         <select class="form-control" id="teatteri">
+          <option value="1029">Valitse alue/teatteri</option>
+          <option value="1014">Pääkaupunkiseutu</option>
           <option value="1012">Espoo</option>
           <option value="1039">Espoo: OMENA</option>
           <option value="1038">Espoo: SELLO</option>
@@ -46,50 +55,20 @@
           <option value="1034">Tampere: CINE ATLAS</option>
           <option value="1035">Tampere: PLEVN</option>
           <option value="1022">Turku: KINOPALATSI</option>
-          
+
 
         </select>
       </div>
+
+      <button id="hae" type="button" class="btn btn-success" onclick="haeTiedot()">Hae elokuvat</button>
     </div>
-      <button type="button" class="btn btn-primary" onclick="haeTiedot()">Hae elokuvat</button>
-    </div>
-        
-      </div>
-    </div>
-      
-    <div class="container">
-      <p id="asd">fasfsaf</p>
-      <!-- <div class="row">
-        <div class="col s12 m6">
-          <div class="card blue-grey lighten-4">
-            <div class="card-content">
-              <span class="card-title">
-                <h3>JavaTpoint</h3>
-              </span>
-              <p>JavaTpoint offers Industrial and Summer Training on Java, PHP, .Net, Hadoop, Data Analytics, R
-                Programming, SAP, Android, Python, Oracle, Seleninum, Linux, C++ and many more technologies.</p>
-            </div>
 
+  </div>
+  </div>
 
-          </div>
-        </div>
-
-        <div class="col s12 m6">
-          <div class="card blue-grey lighten-4">
-            <div class="card-content">
-              <span class="card-title">
-                <h3>JavaTpoint</h3>
-              </span>
-              <p>JavaTpoint offers Industrial and Summer Training on Java, PHP, .Net, Hadoop, Data Analytics, R
-                Programming, SAP, Android, Python, Oracle, Seleninum, Linux, C++ and many more technologies.</p>
-            </div>
-          </div>
-        </div> 
-      </div> -->
-
-
-
-    </div>
+  <div class="container">
+    <p id="kontentti"></p>
+ </div>
 
 
 </body>

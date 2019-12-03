@@ -1,19 +1,3 @@
-// window.onload = function what(){
-
-// var out = '<div class="row">';
-//     out += '<div class="col s12 m6">';
-//     out += '<div class="card blue-grey lighten-4">';
-//     out += '<div class="card-content">';
-//     out += '<span class="card-title">';
-//     out += '<h3>JavaTpoint</h3>';
-//     out += '</span>';
-//       out += '</div>';
-//       out += '</div>';
-
-//       document.getElementById("asd").innerHTML = out;
-
-//       console.log(out);
-//     };
 function haeTiedot() {
 
   var teatteri = document.getElementById("teatteri").value;
@@ -33,18 +17,19 @@ function haeTiedot() {
 
       pic = xmlDoc.getElementsByTagName("EventLargeImageLandscape");
       title = xmlDoc.getElementsByTagName("Title");
-      theatre = xmlDoc.getElementsByTagName("TheatreAndAuditorium");
+     
       showstart = xmlDoc.getElementsByTagName("dttmShowStart");
       showend = xmlDoc.getElementsByTagName("dttmShowEnd");
-      riu = xmlDoc.getElementsByTagName("RatingImageUrl");
-      esitysLinkit = xmlDoc.getElementsByTagName("ShowURL");
-      tietoLinkit = xmlDoc.getElementsByTagName("EventURL");
-
+      rating = xmlDoc.getElementsByTagName("RatingImageUrl");
+      osto = xmlDoc.getElementsByTagName("ShowURL");
+      tiedot = xmlDoc.getElementsByTagName("EventURL");
+      console.log(tiedot.innerHTML);
 
       var out = '<div class="card-columns">';
       for (i = 0; i <= title.length; i++) {
         
         var title = xmlDoc.getElementsByTagName("Title")[i].firstChild.nodeValue;
+        var sali = xmlDoc.getElementsByTagName("TheatreAndAuditorium")[i].firstChild.nodeValue;
         out += '<div class="col-12">';
         out += '<div class="card blue-grey lighten-4">';
         out += '<img class="card-img-top" src="' + pic[i].childNodes[0].nodeValue + '" alt="Elokuvan kuva" style=width:100%">';
@@ -52,8 +37,10 @@ function haeTiedot() {
         out += '<span class="card-title">';
         out += '<h3>' + title + '</h3>';
         out += '</span>';
-        out += "<p>" + title + "</p>";
-
+        out += "<p>" + sali + "</p>";
+        out += '<p><img src="' + rating[i].childNodes[0].nodeValue + '" align="right"></p>'
+        out += '<a id="osto" class="btn btn-success" href="' + osto[i].innerHTML + '">Varaa</a>';
+        out += '<a id="tiedot" class="btn btn-info" href="' + tiedot[i].innerHTML + '">Esittely</a>';
         out += '</div>';
         out += '</div>';
         out += '</div>';
@@ -62,9 +49,11 @@ function haeTiedot() {
     
       };
       out += '</div>';
-      document.getElementById("asd").innerHTML = out;
+      document.getElementById("kontentti").innerHTML = out;
     
    
      
   }
 }};
+
+
