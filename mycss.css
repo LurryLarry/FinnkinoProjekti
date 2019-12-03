@@ -1,0 +1,51 @@
+#otsikko {
+  text-align: center;
+}
+
+h1 {
+  margin: 0 ;
+  padding: 0 ;
+}
+
+.btn {
+  width: 500px;
+  text-align: center;
+}
+
+.dropdown-menu {
+  width: 500px;
+  text-align: left;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+}
+
+ .form-group {
+   text-align: center;
+   width: 500px;
+ }
+#hakuotsikko {
+  
+color: black;
+ font-size: 15px;
+}
+
+#keskitys {
+  
+}
+.container {
+  height: 700px;
+}
+
+
+.dropdown-item:nth-child(odd):hover {
+  
+  background-color: #e8dfa7 !important;
+}
+
+.dropdown-item:nth-child(even):hover {
+  background-color: #e8dfa7 !important;
+}
