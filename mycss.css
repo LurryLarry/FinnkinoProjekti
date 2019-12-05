@@ -1,7 +1,9 @@
 #otsikko {
   text-align: center;
 }
-
+body {
+  background-color: #dbce81;
+}
 h1 {
   margin: 0 ;
   padding: 0 ;
